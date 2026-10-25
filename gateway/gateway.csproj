@@ -13,9 +13,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.24.2-preview.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Protos\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="Protos\identity.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\voice.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Services\" />
+	</ItemGroup>
 
 </Project>
