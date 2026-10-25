@@ -19,8 +19,6 @@ builder.Services.AddHealthChecks().AddCheck("gateway", () => HealthCheckResult.H
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello world");
-
 app.MapGrpcHealthChecksService();
 
 app.Run();
