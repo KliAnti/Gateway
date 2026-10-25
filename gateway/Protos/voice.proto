@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "voice.Services";
+
+package voice;
+
+service Voice {
+  rpc Ping (PingRequest) returns (PongResponse);
+}
+
+message PingRequest {
+  string message = 1;
+}
+
+message PongResponse {
+  string message = 1;
+}
